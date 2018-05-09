@@ -35,10 +35,9 @@ vector<int> calculateC(vector<vector<int>> &arr) {
 vector<int> calculateD(vector<vector<int>> &A) {
 	int sum = 0;
 	for (int i = 0; i < cols; i++) {
-		for (int j = 0; j < rows; j++) {
-			sum += A[i][j];
-		}
+		for (int j = 0; j < rows; j++) if (j != 4) sum += A[i][j];
 		D.push_back(sum);
+		sum = 0;
 	}
 	return D;
 }
