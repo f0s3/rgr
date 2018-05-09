@@ -5,7 +5,6 @@ using namespace std;
 
 int rows = 4;
 int cols = 4;
-
 vector<vector<int>>A;
 vector<int> C;
 vector<int> D;
@@ -24,9 +23,7 @@ vector<int> calculateC(vector<vector<int>> &arr) {
 	int mul = 0;
 	for (int i = 0; i < cols; i++) {
 		mul = 1;
-		for (int j = 0; j < rows; j++) {
-			mul*= arr[j][i];
-		}
+		for (int j = 0; j < rows; j++) mul*= arr[j][i];
 		C.push_back(mul);
 	}
 	return C;
@@ -44,13 +41,8 @@ vector<int> calculateD(vector<vector<int>> &A) {
 
 void showOneDimensionalArray(vector<int> oneDimArray, char ArrName) {
 	cout << "\n" << ArrName << " = \n";
-	switch (ArrName) {
-		case 'C':
-		case 'D':
-			for (int i = 0; i < oneDimArray.size(); i++) cout << oneDimArray[i] << "\t";
-			cout << "\n";
-			break;
-	}
+		for (int i = 0; i < oneDimArray.size(); i++) cout << oneDimArray[i] << "\t";
+		cout << "\n";
 }
 
 void ShowA(vector<vector<int>> arr) {
@@ -61,7 +53,6 @@ void ShowA(vector<vector<int>> arr) {
 		}
 		cout << endl;
 	}
-
 }
 
 int main() {
