@@ -47,11 +47,8 @@ void showOneDimensionalArray(vector<int> oneDimArray, char ArrName) {
 	cout << "\n" << ArrName << " = \n";
 	switch (ArrName) {
 		case 'C':
-			for (int i = 0; i < C.size(); i++) cout << C[i] << "\t";
-			cout << "\n";
-			break;
 		case 'D':
-			for (int i = 0; i < D.size(); i++) cout << D[i] << "\t";
+			for (int i = 0; i < oneDimArray.size(); i++) cout << oneDimArray[i] << "\t";
 			cout << "\n";
 			break;
 	}
