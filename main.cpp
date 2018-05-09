@@ -44,13 +44,15 @@ vector<int> calculateD(vector<vector<int>> &A) {
 }
 
 void showOneDimensionalArray(vector<int> oneDimArray, char ArrName) {
-	cout << ArrName << " = ";
+	cout << "\n" << ArrName << " = \n";
 	switch (ArrName) {
 		case 'C':
-			for (int i = 0; i < C.size(); i++) cout << C[i] << " ";
+			for (int i = 0; i < C.size(); i++) cout << C[i] << "\t";
+			cout << "\n";
 			break;
 		case 'D':
-			for (int i = 0; i < D.size(); i++) cout << D[i] << " ";
+			for (int i = 0; i < D.size(); i++) cout << D[i] << "\t";
+			cout << "\n";
 			break;
 	}
 }
